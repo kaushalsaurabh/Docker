@@ -7,4 +7,6 @@ before_install:
   - docker build -t kaushalsaurabh/Docker -f Dockerfile.dev .
 
 script:
-  - docker run kaushalsaurabh/Docker npm run test -- --coverage
+  - docker run -e CI=true kaushalsaurabh/Docker npm run test
+
+language: generic
