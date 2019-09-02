@@ -4,7 +4,7 @@ services:
 
 
 before_install:
-  - docker build -t kaushalsaurabh/docker -f Dockerfile.dev .
+  - docker build -t kaushalsaurabh/Docker -f Dockerfile.dev .
 
 script:
-  - docker run kaushalsaurabh/docker npm run test -- --coverage
+  - docker run kaushalsaurabh/Docker npm run test -- --coverage
