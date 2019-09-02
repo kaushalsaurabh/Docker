@@ -1,10 +1,10 @@
-sudo : required
-services :
+sudo: required
+services:
   - docker
 
 
-before_install :
+before_install:
   - docker build -t kaushalsaurabh/docker -f Dockerfile.dev .
 
-script :
+script:
   - docker run kaushalsaurabh/docker npm run test -- --coverage
